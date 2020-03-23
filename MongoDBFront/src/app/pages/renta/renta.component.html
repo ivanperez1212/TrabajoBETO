@@ -1,0 +1,44 @@
+<div class="fondo"></div>
+<h1>Crear Renta</h1>
+<div class="input">
+    <span>CLIENTE</span>
+    <select [(ngModel)]="ClienteSeleccionado" class="input1">
+    <option *ngFor="let cliente of clientes" value="{{ cliente._id }}">{{
+      cliente.FirstName
+    }}</option>
+  </select>
+</div>
+
+<div class="input">
+    <span>PROPIEDAD</span>
+    <select [(ngModel)]="PropiedadSeleccionada" class="input1">
+    <option *ngFor="let propiedad of propiedades" value="{{ propiedad._id }}">{{
+      propiedad.name
+    }}</option>
+  </select>
+</div>
+<h1>{{ PropiedadSeleccionada }}{{ ClienteSeleccionado }}</h1>
+
+<div class="input">
+    <span>FECHA</span>
+    <input [(ngModel)]="fecha" type="datetime-local" />
+</div>
+<button (click)="rentar(ClienteSeleccionado, 10051164, fecha)" class="boton">
+  Registrar
+</button>
+
+<h1>RENTAS</h1>
+<div class="contenedor">
+    <div class="cTabla">
+        <table class="tabla" border="1" cellspacing="0" cellpadding="2" bordercolor="666633">
+            <th bgcolor="#808080">Cliente</th>
+            <th bgcolor="#808080">Propiedad</th>
+            <th bgcolor="#808080">Fecha</th>
+            <tr *ngFor="let renta of rentas">
+                <td bgcolor="#fff">{{ renta.Customer }}</td>
+                <td bgcolor="#fff">{{ renta.Property }}</td>
+                <td bgcolor="#fff">{{ renta.Date }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="fondo"></div>
+<div class="range">
+    <span>Rango de precio</span
+  ><input type="number" [(ngModel)]="min" placeholder="Min" /><input
+    type="number"
+    [(ngModel)]="max"
+    placeholder="Max"
+  />
+  <button (click)="rango(min, max)">Buscar</button>
+</div>
+<div class="type">
+  <span>Seleccione el tipo de propiedad</span>
+    <select [(ngModel)]="params">
+    <option value="Condominium">Condominium</option>
+    <option value="Apartment">Apartment</option>
+    <option value="House">House</option>
+  </select>
+    <button (click)="tipo(params)">Buscar</button>
+</div>
+<br /><br /><br />
+
+<div>
+    <table class="tabla" border="2" cellspacing="0" cellpadding="2" bordercolor="666633">
+        <th bgcolor="#808080">Nombre</th>
+        <th bgcolor="#808080">Tipo</th>
+        <th bgcolor="#808080">Precio</th>
+        <tr *ngFor="let propiedad of propiedades">
+            <td bgcolor="#fff">{{ propiedad.name }}</td>
+            <td bgcolor="#fff">{{ propiedad.property_type }}</td>
+            <td bgcolor="#fff">{{ propiedad.price.$numberDecimal }}</td>
+        </tr>
+    </table>
+</div>

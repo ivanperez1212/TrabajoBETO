@@ -1,0 +1,15 @@
+<div class="fondo"></div>
+<div class="form">
+    <h1>Registrar Cliente</h1>
+
+    <input [(ngModel)]="nombre" type="text" placeholder="Nombre" /> <br>
+    <input [(ngModel)]="apellido" type="text" placeholder="Apellido" /><br>
+    <input [(ngModel)]="direccion" type="text" placeholder="Direccion" /><br>
+    <input [(ngModel)]="distrito" type="text" placeholder="Distrito" /><br>
+    <input [(ngModel)]="estado" type="text" placeholder="Estado" /><br>
+    <input [(ngModel)]="ciudad" type="text" placeholder="Ciudad" /><br>
+
+    <button class="btn" (click)="agregar(direccion, ciudad, estado, distrito, nombre, apellido)" type="submit">
+    Registrar
+  </button>
+</div>

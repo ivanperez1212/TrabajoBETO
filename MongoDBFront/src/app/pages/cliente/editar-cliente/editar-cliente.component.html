@@ -1,0 +1,31 @@
+<div class="fondo"></div>
+<div class="form">
+    <h1>Editar Cliente</h1>
+    <div class="input">
+        <span>Select:</span>
+        <select [(ngModel)]="ClienteSeleccionado" class="input1">
+      <option *ngFor="let cliente of clientes" value="{{ cliente._id }}"
+        >{{ cliente.FirstName }} {{ cliente.LastName }}</option
+      >
+    </select><br>
+    </div>
+    <input [(ngModel)]="nombre" type="text" placeholder="Nombre" /><br>
+    <input [(ngModel)]="apellido" type="text" placeholder="Apellido" /><br>
+    <input [(ngModel)]="direccion" type="text" placeholder="Direccion" /><br>
+    <input [(ngModel)]="distrito" type="text" placeholder="Distrito" /><br>
+    <input [(ngModel)]="estado" type="text" placeholder="Estado" /><br>
+    <input [(ngModel)]="ciudad" type="text" placeholder="Ciudad" /><br>
+    <button class="btn" (click)="
+      editar(
+        ClienteSeleccionado,
+        direccion,
+        ciudad,
+        estado,
+        distrito,
+        nombre,
+        apellido
+      )
+    " type="submit">
+    Editar
+  </button>
+</div>

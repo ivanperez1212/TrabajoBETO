@@ -1,0 +1,22 @@
+<div class="fondo"></div>
+<div class="contenedor">
+    <br />
+    <div class="cTabla">
+        <table class="tabla" border="1" cellspacing="0" cellpadding="2" bordercolor="666633">
+            <th bgcolor="#808080">ID</th>
+            <th bgcolor="#808080">Nombre Completo</th>
+            <th bgcolor="#808080">Direccion</th>
+            <th bgcolor="#808080">Ciudad</th>
+            <th bgcolor="#808080">Estado</th>
+            <th bgcolor="#808080">Distrito</th>
+            <tr *ngFor="let cliente of clientes">
+                <td bgcolor="#fff">{{ cliente._id }}</td>
+                <td bgcolor="#fff">{{ cliente.FirstName }} {{ cliente.LastName }}</td>
+                <td bgcolor="#fff">{{ cliente.Address }}</td>
+                <td bgcolor="#fff">{{ cliente.City }}</td>
+                <td bgcolor="#fff">{{ cliente.Country }}</td>
+                <td bgcolor="#fff">{{ cliente.District }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

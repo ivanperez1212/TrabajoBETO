@@ -1,0 +1,10 @@
+.backup {
+    position: absolute;
+    text-align: center;
+    height: 40px;
+    background-color: rgb(34, 34, 34);
+    font-size: 20px;
+    color: white;
+    bottom: 10px;
+    right: 0;
+}
